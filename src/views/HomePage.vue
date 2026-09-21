@@ -6,7 +6,24 @@ const profile = ref({
   name: 'Victor Cuellar',
   slogan: 'Full Stack Developer and Student',
   avatar:
-    'https://www.iemoji.com/view/emoji/820/smileys-people/smiling-face-with-sunglasses',
+    'https://api.dicebear.com/9.x/avataaars/svg?seed=Jack&accessories=sunglasses&accessoriesColor=25557c&accessoriesProbability=90&clothesColor=25557c&clothing=hoodie&clothingGraphic=pizza&eyebrows=defaultNatural&eyes=default&facialHair[]&facialHairColor[]&facialHairProbability=0&hairColor=4a312c&hatColor[]&mouth=twinkle&skinColor=edb98a&top=shortFlat&backgroundColor=c0aede',
+
+  links: [
+    {
+      id: 1,
+      title: 'GitHub',
+      url: 'https://github.com/vcuell13',
+      icon: 'code',
+      description: 'Check out my projects',
+    },
+    {
+      id: 2,
+      title: 'LinkedIn',
+      url: 'https://linkedin.com',
+      icon: 'briefcase',
+      description: 'Connect with me professionally',
+    },
+  ],
 })
 </script>
 
@@ -15,7 +32,7 @@ const profile = ref({
     <!-- Profile Header -->
     <div class="mb-8 flex flex-col items-center text-center">
       <div
-        class="mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-green-450 shadow-lg shadow-green-560/20 sm:h-32 sm:w-32"
+        class="mb-4 h-24 w-24 overflow-hidden rounded-full border-4 border-green-400 shadow-lg shadow-green-500/20 sm:h-32 sm:w-32"
       >
         <img
           :src="profile.avatar"
@@ -23,10 +40,14 @@ const profile = ref({
           class="h-full w-full object-cover"
         />
       </div>
+
       <h1 class="mb-2 font-display text-2xl font-bold text-white sm:text-3xl">
         {{ profile.name }}
       </h1>
-      <p class="max-w-xs text-gray-300 sm:text-lg">{{ profile.slogan }}</p>
+
+      <p class="max-w-xs text-gray-300 sm:text-lg">
+        {{ profile.slogan }}
+      </p>
     </div>
 
     <!-- Link List -->
