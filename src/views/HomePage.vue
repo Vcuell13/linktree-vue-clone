@@ -23,6 +23,20 @@ const profile = ref({
       icon: 'briefcase',
       description: 'Connect with me professionally',
     },
+    {
+      id: 3,
+      title: 'Expense Splitter App',
+      url: 'https://expense-splitter-vue.vcuell13.workers.dev/',
+      icon: 'flag',
+      description: 'Live deployed version of my Expense Splitter',
+    },
+    {
+      id: 4,
+      title: 'Expense Splitter Vue Version App',
+      url: 'https://2867f529.expenses-html-757.pages.dev',
+      icon: 'code',
+      description: 'Static HTML version of the Expense Splitter',
+    },
   ],
 })
 </script>
@@ -68,4 +82,3 @@ const profile = ref({
     </RouterLink>
   </main>
 </template>
-
