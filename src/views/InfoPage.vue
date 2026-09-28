@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const bio = ref({
   name: 'Victor Cuellar',
   avatar:
-    'https://www.iemoji.com/view/emoji/820/smileys-people/smiling-face-with-sunglasses',
+    'https://api.dicebear.com/9.x/avataaars/svg?seed=Jack&accessories=sunglasses&accessoriesColor=25557c&accessoriesProbability=90&clothesColor=25557c&clothing=hoodie&clothingGraphic=pizza&eyebrows=defaultNatural&eyes=default&facialHair[]&facialHairColor[]&facialHairProbability=0&hairColor=4a312c&hatColor[]&mouth=twinkle&skinColor=edb98a&top=shortFlat&backgroundColor=c0aede',
   about: `I'm a beginer full-stach developer with biginner building modern web applications in an eclosed eviorment I have yet to fully put my skills to the real world. I have knowledge in Vue.js, React, and Node.js. I'm also a student at STC.`,
   skills: ['Vue.js', 'React', 'Java Script', 'Node.js', 'C++'],
   email: 'Vcuell13@southtexascollege.edu',
@@ -16,19 +16,17 @@ const bio = ref({
   <main class="flex min-h-screen flex-col items-center px-4 py-8 sm:py-12">
     <RouterLink
       to="/"
-      class="my-8 self-start text-sm text-gray-400 underline-offset-4 transition-colors duration-200 hover:text-green-400 hover:underline"
+      class="my-8 self-start text-sm text-teal-300 underline-offset-4 transition-colors duration-200 hover:text-cyan-300 hover:underline"
     >
       ← Back to Links
     </RouterLink>
 
-    <!-- Profile Card -->
     <div
-      class="w-full max-w-lg rounded-2xl border border-gray-700 bg-gray-800 p-6 shadow-xl shadow-gray-900/50 sm:p-8"
+      class="w-full max-w-lg rounded-2xl border border-cyan-600 bg-[#0f172a] p-6 shadow-xl shadow-cyan-900/40 sm:p-8"
     >
-      <!-- Header -->
       <div class="mb-6 flex flex-col items-center text-center sm:flex-row sm:text-left">
         <div
-          class="mb-4 h-20 w-20 shrink-0 overflow-hidden rounded-full border-4 border-green-400 sm:mr-6 sm:mb-0"
+          class="mb-4 h-20 w-20 shrink-0 overflow-hidden rounded-full border-4 border-cyan-500 sm:mr-6 sm:mb-0"
         >
           <img
             :src="bio.avatar"
@@ -37,40 +35,36 @@ const bio = ref({
           />
         </div>
         <div>
-          <h1 class="mb-1 font-display text-2xl font-bold text-white">{{ bio.name }}</h1>
-          <p class="text-sm text-gray-400">📍 {{ bio.location }}</p>
+          <h1 class="mb-1 font-display text-2xl font-bold text-cyan-300">{{ bio.name }}</h1>
+          <p class="text-sm text-teal-300">📍 {{ bio.location }}</p>
         </div>
       </div>
 
-      <!-- About Section -->
       <div class="mb-6">
-        <h2 class="mb-3 text-lg font-semibold text-white">About</h2>
-        <p class="leading-relaxed text-gray-300">{{ bio.about }}</p>
+        <h2 class="mb-3 text-lg font-semibold text-cyan-300">About</h2>
+        <p class="leading-relaxed text-teal-200">{{ bio.about }}</p>
       </div>
 
-      <!-- Skills Section -->
       <div class="mb-6">
-        <h2 class="mb-3 text-lg font-semibold text-white">Skills</h2>
+        <h2 class="mb-3 text-lg font-semibold text-cyan-300">Skills</h2>
         <div class="flex flex-wrap gap-2">
           <span
             v-for="skill in bio.skills"
             :key="skill"
-            class="rounded-full bg-green-900/50 px-3 py-1 text-sm text-green-300"
+            class="rounded-full bg-cyan-900/40 px-3 py-1 text-sm text-cyan-300"
           >
             {{ skill }}
           </span>
         </div>
       </div>
 
-      <!-- Contact -->
       <div>
-        <h2 class="mb-3 text-lg font-semibold text-white">Get in Touch</h2>
+        <h2 class="mb-3 text-lg font-semibold text-cyan-300">Get in Touch</h2>
         <a
           :href="`mailto:${bio.email}`"
-          class="group inline-flex items-center gap-2 rounded-xl bg-green-500 px-6 py-3 font-medium text-white shadow-lg shadow-green-500/30 transition-all duration-200 hover:scale-105 hover:bg-green-600 hover:shadow-xl hover:shadow-green-500/40 active:scale-95"
+          class="group inline-flex items-center gap-2 rounded-xl bg-cyan-600 px-6 py-3 font-medium text-white shadow-lg shadow-cyan-600/30 transition-all duration-200 hover:scale-105 hover:bg-cyan-700 hover:shadow-xl hover:shadow-cyan-600/40 active:scale-95"
         >
           <svg
-            data-slot="icon"
             fill="none"
             stroke-width="1.5"
             stroke="currentColor"

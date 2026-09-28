@@ -36,11 +36,10 @@ const icons = {
     :href="url"
     target="_blank"
     rel="noopener noreferrer"
-    class="group relative flex w-full items-center gap-4 rounded-xl border border-gray-700 bg-gray-800 p-4 shadow-md shadow-gray-900/50 transition-all duration-300 hover:scale-[1.02] hover:border-green-600 hover:shadow-xl hover:shadow-green-500/20"
+    class="group relative flex w-full items-center gap-4 rounded-xl border border-cyan-700 bg-[#0f172a] p-4 shadow-md shadow-cyan-900/40 transition-all duration-300 hover:scale-[1.03] hover:border-teal-500 hover:shadow-xl hover:shadow-cyan-600/30"
   >
-    <!-- Icon Container -->
     <div
-      class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gray-700 text-green-400 transition-all duration-300 group-hover:scale-110 group-hover:bg-green-500 group-hover:text-white group-hover:shadow-xl group-hover:shadow-green-500/20"
+      class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-cyan-900/40 text-cyan-300 transition-all duration-300 group-hover:scale-110 group-hover:bg-cyan-600 group-hover:text-white group-hover:shadow-xl group-hover:shadow-cyan-600/30"
     >
       <svg
         viewBox="0 0 24 24"
@@ -51,17 +50,15 @@ const icons = {
       ></svg>
     </div>
 
-    <!-- Text Content -->
     <div class="min-w-0 flex-1">
-      <h3 class="truncate font-display font-semibold text-white">{{ title }}</h3>
-      <p class="truncate text-sm text-gray-400">
+      <h3 class="truncate font-display font-semibold text-cyan-200">{{ title }}</h3>
+      <p class="truncate text-sm text-teal-300">
         {{ description }}
       </p>
     </div>
 
-    <!-- Hover Glow Effect -->
     <div
-      class="absolute inset-0 rounded-xl bg-linear-to-r from-green-500/0 via-green-500/10 to-green-500/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      class="absolute inset-0 rounded-xl bg-linear-to-r from-cyan-500/0 via-cyan-500/10 to-cyan-500/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
     />
   </a>
 </template>
